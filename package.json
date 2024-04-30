@@ -1,0 +1,47 @@
+{
+  "name": "sampl",
+  "displayName": "sampl",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "hello-world.showHelloWorld",
+        "title": "Hello World (React + Vite): Show"
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "concurrently \"pnpm:dev-*\"",
+    "install:all": "pnpm install && cd webview-ui && pnpm install",
+    "dev-webview": "cd webview-ui && pnpm run dev",
+    "dev-extension": "pnpm run watch",
+    "build:webview": "cd webview-ui && pnpm run build",
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.88.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  }
+}
