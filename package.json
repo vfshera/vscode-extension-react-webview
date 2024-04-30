@@ -1,6 +1,6 @@
 {
-  "name": "sampl",
-  "displayName": "sampl",
+  "name": "extension",
+  "displayName": "A vscode extension with React Webview",
   "description": "",
   "version": "0.0.1",
   "engines": {
